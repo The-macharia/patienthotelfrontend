@@ -3,7 +3,7 @@ import Image1 from "../../assets/eldon3.jpeg";
 
 const About = () => {
   return (
-    <section className="about-section">
+    <section className="about-section" id="about">
       <Container>
         <Row>
           <Col sm={6}>

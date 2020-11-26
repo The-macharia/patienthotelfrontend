@@ -5,35 +5,36 @@ import Navs from "./components/Navs";
 import Footer from "./containers/Footer/Footer";
 import { BackTop } from "antd";
 import { withRouter } from "react-router-dom";
-
-// const App = () => {
-//   return (
-//     <>
-//       <Navs />
-//       <Homepage />
-//       <Footer />
-//       <BackTop visibilityHeight={100} duration={100} />
-//     </>
-//   );
-// };
-
-// export default App;
+import Spinner from "./components/Spinner";
 
 class App extends Component {
+  state = {
+    loading: true,
+  };
+
+  componentDidMount() {
+    this.setState({ loading: false });
+  }
+
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
       window.scrollTo(0, 0);
     }
   }
+
   render() {
-    return (
-      <>
-        <Navs />
-        <Homepage />
-        <Footer />
-        <BackTop visibilityHeight={100} duration={100} />
-      </>
-    );
+    if (!this.state.loading) {
+      return (
+        <>
+          <Navs />
+          <Homepage />
+          <Footer />
+          <BackTop visibilityHeight={100} duration={100} />
+        </>
+      );
+    }
+
+    return <Spinner size={"large"} />;
   }
 }
 
