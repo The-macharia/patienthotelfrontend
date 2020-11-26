@@ -1,0 +1,46 @@
+@mixin flex-props {
+  display: flex;
+  align-items: center;
+}
+
+/*
+$breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (max-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+// @mixin flex-props {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }

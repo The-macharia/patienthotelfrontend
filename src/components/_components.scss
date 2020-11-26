@@ -1,0 +1,262 @@
+.navbar a {
+  font-size: 2rem;
+}
+
+.hero {
+  @include respond(big-desktop) {
+    min-height: 95vh;
+  }
+  &__btn {
+    font-size: 2rem;
+    width: 80%;
+  }
+}
+
+.hero-text h1 {
+  font-size: 80px;
+  line-height: 90px;
+  color: #fff;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+}
+.hero-text p {
+  font-size: 18px;
+  color: #fff;
+  line-height: 28px;
+  margin-bottom: 35px;
+}
+
+.primary-btn {
+  display: inline-block;
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  position: relative;
+  padding: 0.5rem 1.5rem;
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #dfa974;
+    content: "";
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  @include respond(tab-port) {
+    margin: 30px auto;
+  }
+}
+.booking-form-text {
+  padding: 44px 40px 50px 40px;
+  margin-right: 40px;
+  margin-left: 40px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    text-transform: capitalize;
+    font-size: 40px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+  }
+
+  @include respond(tab-port) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.booking-form {
+  background: #fff;
+  padding: 44px 40px 50px 40px;
+  border-radius: 4px;
+  margin-right: 40px;
+  margin-left: 40px;
+
+  @include respond(tab-port) {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100% !important;
+    padding: 2rem;
+  }
+}
+.booking-form h3 {
+  color: #19191a;
+  margin-bottom: 36px;
+  text-align: center;
+  font-size: 30px;
+}
+.booking-form form .check-date {
+  position: relative;
+  margin-bottom: 15px;
+}
+.booking-form form .select-option {
+  margin-bottom: 15px;
+}
+
+.booking-form form button {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid #dfa974;
+  border-radius: 2px;
+  color: #dfa974;
+  font-weight: 500;
+  background: transparent;
+  width: 100%;
+  height: 46px;
+  margin-top: 30px;
+}
+
+.cbtn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    // font-size: $default-font-size;
+    position: relative;
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    &::after {
+      transform: scale(1.52);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &--white {
+    background-color: #fff;
+    color: #777;
+
+    &::after {
+      background-color: #fff;
+    }
+    &:hover {
+      color: #777;
+    }
+  }
+  &--green {
+    background-color: #dfa974;
+    color: #fff;
+
+    &::after {
+      background-color: #dfa974;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+}
+
+// .btn-text {
+//   &:link,
+//   &:visited {
+//     // font-size: $default-font-size;
+//     color: #dfa974;
+//     display: inline-block;
+//     text-decoration: none;
+//     border-bottom: 1px solid #dfa974;
+//     padding: 3px;
+//     transition: all 0.2s;
+//   }
+
+//   &:hover {
+//     background-color: #dfa974;
+//     color: #fff;
+//     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+//     transform: translate(-2px);
+//   }
+
+//   &:active {
+//     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+//     transform: translate(0);
+//   }
+// }
+.room-details-item {
+  margin-bottom: 50px;
+  img {
+    margin-bottom: 40px;
+    width: 100%;
+    height: auto;
+  }
+}
+.room-details {
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.room-title {
+  color: #dfa974;
+  font-weight: 700;
+  margin-bottom: 25px;
+  h2 {
+    color: #222;
+    margin-bottom: 17px;
+    font-size: 4rem;
+    line-height: 1.7;
+  }
+  h3 {
+    color: #dfa974;
+    font-weight: 700;
+    margin-bottom: 14px;
+    font-size: 3rem;
+
+    span {
+      font-family: "Cabin", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #19191a;
+    }
+  }
+}
+.room-text {
+  line-height: 1.7;
+  letter-spacing: 0.1rem;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #777;
+  border-top: 1px solid #777;
+  border-radius: 0.5rem;
+  p {
+    margin-bottom: 2rem;
+  }
+}
+.room-amenities {
+}
