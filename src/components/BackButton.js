@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 
 const BackButtons = (props) => {
   return (
-    <Row className="my-4">
+    <Row style={{ marginBottom: "2.5rem" }}>
       <Col>
         <button
           style={{ fontSize: "1.8rem" }}

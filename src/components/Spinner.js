@@ -1,9 +1,9 @@
 import { Spin } from "antd";
 
-export default function Spinner(props) {
+export default function Spinner() {
   return (
     <div className="spinner">
-      <Spin size={props.size} />
+      <Spin size="large" />
     </div>
   );
 }

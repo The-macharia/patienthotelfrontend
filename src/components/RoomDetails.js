@@ -7,7 +7,7 @@ import BackButtons from "./BackButton";
 
 const RoomDetails = (props) => {
   return (
-    <section className="section-room-details">
+    <section className="section-room-details" style={{ paddingTop: "180px" }}>
       <Container>
         <BackButtons />
         <Row>

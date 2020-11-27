@@ -7,15 +7,15 @@ const BookNow = () => {
     <section className="section-book-now">
       <Container>
         <Row>
-          <Col md={6}>
-            <div className="booking-form-text">
-              <h1>
+          <Col md={6} className="booking-col">
+            <div className="about-title">
+              <h2>
                 Book Now To <br />
                 Reserve your room.
-              </h1>
+              </h2>
             </div>
           </Col>
-          <Col md={6}>
+          <Col md={6} className="booking-col">
             <div className="booking-form" style={{ width: "90%" }}>
               <h3>Book Your Stay</h3>
               <form>

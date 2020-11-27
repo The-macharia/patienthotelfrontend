@@ -1,13 +1,116 @@
 .spinner {
   @include flex-props;
-  justify-content: center;
   width: 100%;
   height: 100vh;
   background-color: rgba(#fff, 0.6);
 }
+.navbar {
+  box-shadow: 0px 12px 15px rgba(36, 11, 12, 0.05);
 
+  @include respond(tab-port) {
+    padding: 1.5rem;
+  }
+}
+.navbar-toggler {
+  font-size: 2rem;
+}
 .navbar a {
   font-size: 2rem;
+
+  @include respond(tab-port) {
+    padding: 1rem;
+  }
+}
+.nav-a {
+  color: #222 !important;
+  font-size: 16px;
+  margin-right: 42px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 24px 0;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
+  &:hover {
+    text-decoration: none;
+    outline: none;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+  &:active {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 55px;
+    width: 100%;
+    height: 2px;
+    background: #dfa974;
+    content: "";
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+
+.top-nav {
+  border-bottom: 1px solid #e5e5e5;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+.tn-left {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    list-style: none;
+    display: inline-block;
+    font-size: 16px;
+    color: #19191a;
+    font-weight: 500;
+    padding: 14px 0 12px;
+    position: relative;
+
+    &:first-of-type {
+      margin-right: 64px;
+
+      &::after {
+        position: absolute;
+        right: -32px;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: #e5e5e5;
+        content: "";
+      }
+    }
+  }
+}
+
+.tn-right {
+  text-align: right;
+}
+.top-social {
+  display: inline-block;
+  margin-right: 35px;
+  padding: 13px 0;
+
+  a {
+    color: #222;
+    margin: 1rem;
+  }
 }
 
 .hero {
@@ -26,6 +129,11 @@
   color: #fff;
   margin-bottom: 16px;
   text-transform: capitalize;
+
+  @include respond(tab-port) {
+    font-size: 8rem;
+    line-height: 1.2;
+  }
 }
 .hero-text p {
   font-size: 18px;
@@ -43,6 +151,7 @@
   font-weight: 700;
   position: relative;
   padding: 0.5rem 1.5rem;
+
   &::after {
     position: absolute;
     left: 0;
@@ -60,6 +169,9 @@
   @include respond(tab-port) {
     margin: 30px auto;
   }
+}
+.booking-col {
+  @include flex-props;
 }
 .booking-form-text {
   padding: 44px 40px 50px 40px;

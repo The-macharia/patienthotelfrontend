@@ -34,7 +34,7 @@ class App extends Component {
       );
     }
 
-    return <Spinner size={"large"} />;
+    return <Spinner size="large" />;
   }
 }
 

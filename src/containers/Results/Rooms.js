@@ -8,11 +8,11 @@ import BackButton from "../../components/BackButton";
 const Rooms = (props) => {
   return (
     <>
-      <section className="featured-section">
+      <section className="featured-section" style={{ paddingTop: "180px" }}>
         <Container>
           <Row>
             <div className="about-title text-center w-100">
-              <h2>Rooms</h2>
+              <h2 className="text-uppercase">Rooms</h2>
             </div>
           </Row>
           <BackButton />

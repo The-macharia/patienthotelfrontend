@@ -11,6 +11,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .featured-section,
 .about-section {
   padding: 100px 0;
@@ -25,6 +26,10 @@
 .about-text {
   text-align: center;
   padding: 0 35px;
+
+  @include respond(tab-port) {
+    padding: 0 20px;
+  }
 }
 .about-text p.f-para {
   margin-bottom: 10px;
@@ -52,6 +57,10 @@
   line-height: 58px;
   margin-top: 10px;
   text-transform: capitalize;
+
+  @include respond(tab-port) {
+    font-size: 5rem;
+  }
 }
 .footer-section {
   background: #222736;
@@ -158,15 +167,31 @@
 
 .featured {
   &__card {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #ebebeb;
     border-radius: 0.4rem;
     overflow: hidden;
+    transition: all 0.3s;
+    box-shadow: 0, 0.1rem 0.2rem rgba(0, 0, 0, 0.45);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35);
+      transform: scale(1.1);
+      border: none;
+    }
+
+    &:hover {
+      img {
+        filter: brightness(120%) saturate(120%);
+      }
+    }
   }
   &__image {
     img {
+      transition: all 0.2s;
       width: 100%;
       height: auto;
     }
@@ -227,5 +252,19 @@
 
 .section-room-details {
   padding-top: 80px;
+
   padding-bottom: 80px;
+
+  @include respond(tab-port) {
+    padding-top: 80px !important;
+  }
+}
+
+.section-nav {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: white;
+  left: 0;
 }
